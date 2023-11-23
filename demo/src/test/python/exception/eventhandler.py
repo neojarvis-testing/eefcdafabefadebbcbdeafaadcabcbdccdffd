@@ -1,14 +1,13 @@
 import os
 import logging
 
-class EventHandler:
-    def __init__(self):
-        pass
+from selenium.webdriver.support.abstract_event_listener import AbstractEventListener
 
-    def handle_event(self, event):
+class EventHandler(AbstractEventListener):
+    def before_navigate_to(self, url, driver):
+        print("Before navigating to:", url)
 
-        pass
+    def after_navigate_to(self, url, driver):
+        print("After navigating to:", url)
 
-    def log_event(self, event):
-
-        pass
+    # Implement other methods as needed

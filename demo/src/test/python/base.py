@@ -24,7 +24,7 @@ class TestGilletteSearch(unittest.TestCase):
             "version": "",
         }      
       
-        remote_url = "http://34.85.201.58:4498"
+        remote_url = "http://34.85.201.58:4499"
         
         self.driver = webdriver.Remote(
             command_executor=remote_url,
@@ -34,8 +34,8 @@ class TestGilletteSearch(unittest.TestCase):
         self.driver = EventFiringWebDriver(self.driver, event_handler)       
 
         self.gillette_page = GillettePage(self.driver)
-        self.mach3 = Mach3Page(self.driver)
-        self.hairstyle = HairStylePage(self.driver)
+        # self.mach3 = Mach3Page(self.driver)
+        # self.hairstyle = HairStylePage(self.driver)
 
     def test_gillette_search(self):
         self.gillette_page.open()
@@ -74,3 +74,5 @@ if __name__ == "__main__":
         descriptions="Test execution report"
     )
     test_result = test_runner.run(suite)
+
+
