@@ -34,8 +34,8 @@ class TestGilletteSearch(unittest.TestCase):
         self.driver = EventFiringWebDriver(self.driver, event_handler)       
 
         self.gillette_page = GillettePage(self.driver)
-        # self.mach3 = Mach3Page(self.driver)
-        # self.hairstyle = HairStylePage(self.driver)
+        self.mach3 = Mach3Page(self.driver)
+        self.hairstyle = HairStylePage(self.driver)
 
     def test_gillette_search(self):
         self.gillette_page.open()
